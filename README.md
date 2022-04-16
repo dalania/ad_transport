@@ -14,13 +14,8 @@
 * Spring
 * PostgreSQL
 
-## Demonstração
-* [Bikcraft](https://bikcraft2.netlify.app/)
-
-
-
 ##  Autores
-* [Dalania Silva](https://github.com/linkParaPerfil) - *Desenvolvedora Front-end*
+* [Dalania Silva](https://github.com/linkParaPerfil)
 
 
 ---
