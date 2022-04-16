@@ -1,0 +1,29 @@
+version: "3.1"  # optional since v1.27.0
+services:
+  app:
+    container_name: springboot
+    image: springboot3
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on: #o postgress vai subir primeiro que o container por causa do depends_on
+      - postgresql
+    links:
+      - postgresql
+    networks:
+      - some-net
+
+  postgresql:
+    image: postgres
+
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=96589238
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=adTransport
+    networks:
+       - some-net
+networks:
+  some-net:
+    driver: bridge
